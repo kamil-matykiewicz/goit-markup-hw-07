@@ -7,58 +7,78 @@ but formatting on save changes it to uppercase-->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-family: 'Raleway', sans-serif; -->
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
     <header>
-      <nav>
-        <a href="#">WebStudio</a>
-        <ul>
-          <li>Studio</li>
-          <li>Portfolio</li>
-          <li>Contacts</li>
+      <div class="top-line">
+        <nav>
+          <a class="link logo" href="#">WebStudio</a>
+          <ul class="list">
+            <li><a class="link" href="./index.html">Studio</a></li>
+            <li><a class="link" href="./portfolio.html">Portfolio</a></li>
+            <li><a class="link" href="#">Contacts</a></li>
+          </ul>
+        </nav>
+
+        <ul class="list contacts-header">
+          <li>
+            <a class="link" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li>
+            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
         </ul>
-      </nav>
+      </div>
 
-      <ul>
-        <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-        <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
-      </ul>
-
-      <section>
-        <h1>EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
-        <button type="button">Request our service</button>
+      <section class="banner">
+        <h1 class="theme-line">effective solutions for your business</h1>
+        <button class="btn btn-request" type="button">
+          Request our service
+        </button>
       </section>
     </header>
 
     <main>
-      <section class="group-1">
-        <ul>
+      <section class="traits">
+        <ul class="list">
           <li>
-            <p>ATTENTION TO DETAILS</p>
-            <p>
+            <p class="trait">attention to details</p>
+            <p class="trait-about">
               We go into all the details and processes of your business to
               develop a customized solution.
             </p>
           </li>
           <li>
-            <p>PUNCTUALITY</p>
-            <p>
+            <p class="trait">punctuality</p>
+            <p class="trait-about">
               With us, you can feel safe and secure. An important principle of
               the company: respect your time and respect the agreed deadlines.
             </p>
           </li>
           <li>
-            <p>PLANNING</p>
-            <p>
+            <p class="trait">planning</p>
+            <p class="trait-about">
               You will be able to observe and participate in every phase of
               solution development and implementation.
             </p>
           </li>
           <li>
-            <p>MODERN TECHNOLOGIES</p>
-            <p>
+            <p class="trait">modern technologies</p>
+            <p class="trait-about">
               We use innovative tools to solve assigned tasks. It's time to
               simplify work processes.
             </p>
@@ -66,9 +86,9 @@ but formatting on save changes it to uppercase-->
         </ul>
       </section>
 
-      <section>
-        <h2>What we do</h2>
-        <ul>
+      <section class="what-we-do">
+        <h2 class="what-we-do-title">What we do</h2>
+        <ul class="list">
           <!-- I've tried not to include trailing slashes in self-closing elements of <img>, according to this source:
             https://codeguide.co/#html-syntax
             but formatting on save keeps reverting them back -->
@@ -99,9 +119,9 @@ but formatting on save changes it to uppercase-->
         </ul>
       </section>
 
-      <section>
-        <h2>Our Team</h2>
-        <ul class="team">
+      <section class="team">
+        <h2 class="team-title">Our Team</h2>
+        <ul class="list team-list">
           <li class="team-card">
             <figure>
               <img
@@ -111,8 +131,8 @@ but formatting on save changes it to uppercase-->
                 height="260"
               />
               <figcaption>
-                <p>Игорь Демьяненко</p>
-                <p>Product Designer</p>
+                <p class="name">Игорь Демьяненко</p>
+                <p class="trade">Product Designer</p>
               </figcaption>
             </figure>
           </li>
@@ -125,8 +145,8 @@ but formatting on save changes it to uppercase-->
                 height="260"
               />
               <figcaption>
-                <p>Ольга Репина</p>
-                <p>Frontend Developer</p>
+                <p class="name">Ольга Репина</p>
+                <p class="trade">Frontend Developer</p>
               </figcaption>
             </figure>
           </li>
@@ -139,8 +159,8 @@ but formatting on save changes it to uppercase-->
                 height="260"
               />
               <figcaption>
-                <p>Николай Тарасов</p>
-                <p>Marketing</p>
+                <p class="name">Николай Тарасов</p>
+                <p class="trade">Marketing</p>
               </figcaption>
             </figure>
           </li>
@@ -153,8 +173,8 @@ but formatting on save changes it to uppercase-->
                 height="260"
               />
               <figcaption>
-                <p>Михаил Ермаков</p>
-                <p>UI Designer</p>
+                <p class="name">Михаил Ермаков</p>
+                <p class="trade">UI Designer</p>
               </figcaption>
             </figure>
           </li>
@@ -162,17 +182,21 @@ but formatting on save changes it to uppercase-->
       </section>
     </main>
 
-    <footer>
-      <address>
-        <p><a href="#">WebStudio</a></p>
+    <footer class="basement">
+      <a class="link logo" href="#">WebStudio</a>
+      <address class="contact">
         <p>
           695 Park Ave, New York, NY 10065,<br />
           United States
         </p>
-        <p>
-          <a href="mailto:">info@example.com</a
-          ><a href="tel:+12127724150">+1 212-772-4150</a>
-        </p>
+        <ul class="list contacts-footer">
+          <li>
+            <a class="link" href="mailto:info@example.com">info@example.com</a>
+          </li>
+          <li>
+            <a class="link" href="tel:+12127724150">+1 212-772-4150</a>
+          </li>
+        </ul>
       </address>
     </footer>
   </body>

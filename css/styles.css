@@ -1,0 +1,188 @@
+/* grouping & generic stuff */
+:root {
+  --blue: #2196f3;
+  --default-text-color: #212121;
+  --gray-text: #757575;
+  --dark: #2f303a;
+  --white: #fff;
+  --white-lesser: #eee;
+  --gray-bcg: #f5f4fa;
+  --white-alpha: #fff9;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--default-text-color);
+}
+
+.btn {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.list {
+  list-style: none;
+}
+
+.contacts-header,
+.trait-about {
+  color: var(--gray-text);
+}
+
+.banner,
+.what-we-do,
+.team,
+.portfolio {
+  text-align: center;
+}
+
+.what-we-do-title,
+.team-title {
+  font-size: 36px;
+  line-height: 1.16;
+}
+
+.logo,
+.traits,
+.what-we-do-title,
+.team,
+.contact,
+.btn-filter,
+.project-category {
+  letter-spacing: 0.03em;
+}
+
+.top-line,
+.traits,
+.contact {
+  font-size: 14px;
+}
+
+.theme-line,
+.btn-request,
+.contact {
+  color: var(--white);
+}
+/* end of grouping & generic stuff */
+
+/* index.html */
+/* header */
+.top-line {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.link {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.logo {
+  font: 700 26px/1.19 'Raleway', sans-serif;
+  color: var(--blue);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--blue);
+}
+
+.banner {
+  background-color: var(--dark);
+}
+
+.theme-line {
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.btn-request {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  background-color: var(--blue);
+}
+/* end of header */
+
+/* .traits section */
+.trait {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.trait-about {
+  line-height: 1.71;
+}
+/* end of .traits section */
+
+/* .team section */
+.team {
+  line-height: 1.1875;
+  background-color: var(--gray-bcg);
+}
+
+.team-card {
+  background-color: var(--white);
+}
+
+.name {
+  font-weight: 500;
+}
+
+.trade {
+  color: var(--gray-text);
+}
+/* end of .team section */
+
+/* footer */
+.basement {
+  background-color: var(--dark);
+}
+
+.contact {
+  font-style: normal;
+  line-height: 1.71;
+}
+
+.contacts-footer {
+  color: var(--white-alpha);
+}
+/* end of footer */
+/* end of index.html */
+
+/* portfolio.html */
+/* .portfolio section */
+.btn-filter {
+  font-weight: 500;
+  line-height: 1.625;
+  color: var(--default-text-color);
+  background-color: var(--gray-bcg);
+}
+
+.project-card {
+  border: 1px solid var(--white-lesser);
+}
+
+.project-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project-category {
+  line-height: 1.875;
+}
+/* .portfolio section */
+/* end of portfolio.html */
