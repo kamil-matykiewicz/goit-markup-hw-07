@@ -10,56 +10,65 @@ but formatting on save changes it to uppercase-->
     <title>Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
     <header>
-      <div class="top-line">
-        <nav>
-          <a class="link logo" href="#">WebStudio</a>
-          <ul class="list">
-            <li><a class="link" href="./index.html">Studio</a></li>
-            <li><a class="link" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="link" href="#">Contacts</a></li>
-          </ul>
-        </nav>
+      <div class="container">
+        <div class="top-line">
+          <nav>
+            <ul class="top-line-nav">
+              <li><a class="link logo" href="#">WebStudio</a></li>
+              <li><a class="link" href="./index.html">Studio</a></li>
+              <li><a class="link" href="./portfolio.html">Portfolio</a></li>
+              <li><a class="link" href="#">Contacts</a></li>
+            </ul>
+          </nav>
 
-        <ul class="list contacts-header">
-          <li>
-            <a class="link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
-          </li>
-        </ul>
+          <ul class="contacts-header">
+            <li>
+              <a class="link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
-    <main class="portfolio">
-      <aside>
-        <ul class="list">
+    <main class="section">
+      <div class="container">
+        <ul class="filters">
           <li><button class="btn btn-filter" type="button">All</button></li>
           <li>
             <button class="btn btn-filter" type="button">Web-sites</button>
           </li>
-          <li><button class="btn btn-filter" type="button">Apps</button></li>
-          <li><button class="btn btn-filter" type="button">Design</button></li>
+          <li><button class="btn btn-filter wider" type="button">Apps</button></li>
+          <li>
+            <button class="btn btn-filter" type="button">Design</button>
+          </li>
           <li>
             <button class="btn btn-filter" type="button">Marketing</button>
           </li>
         </ul>
-      </aside>
 
-      <section class="portfolio-projects">
-        <ul class="list">
-          <li>
-            <article>
+        <section class="portfolio-projects">
+          <ul class="projects-list">
+            <li>
               <figure class="project-card">
                 <img
                   src="images/project1-img.jpg"
@@ -72,11 +81,9 @@ but formatting on save changes it to uppercase-->
                   <p class="project-category">Web-site</p>
                 </figcaption>
               </figure>
-            </article>
-          </li>
+            </li>
 
-          <li>
-            <article>
+            <li>
               <figure class="project-card">
                 <img
                   src="images/project2-img.jpg"
@@ -91,11 +98,9 @@ but formatting on save changes it to uppercase-->
                   <p class="project-category">Design</p>
                 </figcaption>
               </figure>
-            </article>
-          </li>
+            </li>
 
-          <li>
-            <article>
+            <li>
               <figure class="project-card">
                 <img
                   src="images/project3-img.jpg"
@@ -108,11 +113,9 @@ but formatting on save changes it to uppercase-->
                   <p class="project-category">Apps</p>
                 </figcaption>
               </figure>
-            </article>
-          </li>
+            </li>
 
-          <li>
-            <article>
+            <li>
               <figure class="project-card">
                 <img
                   src="images/project4-img.jpg"
@@ -125,11 +128,9 @@ but formatting on save changes it to uppercase-->
                   <p class="project-category">Marketing</p>
                 </figcaption>
               </figure>
-            </article>
-          </li>
+            </li>
 
-          <li>
-            <article>
+            <li>
               <figure class="project-card">
                 <img
                   src="images/project5-img.jpg"
@@ -142,11 +143,9 @@ but formatting on save changes it to uppercase-->
                   <p class="project-category">Apps</p>
                 </figcaption>
               </figure>
-            </article>
-          </li>
+            </li>
 
-          <li>
-            <article>
+            <li>
               <figure class="project-card">
                 <img
                   src="images/project6-img.jpg"
@@ -159,11 +158,9 @@ but formatting on save changes it to uppercase-->
                   <p class="project-category">Web-site</p>
                 </figcaption>
               </figure>
-            </article>
-          </li>
+            </li>
 
-          <li>
-            <article>
+            <li>
               <figure class="project-card">
                 <img
                   src="images/project7-img.jpg"
@@ -176,11 +173,9 @@ but formatting on save changes it to uppercase-->
                   <p class="project-category">Design</p>
                 </figcaption>
               </figure>
-            </article>
-          </li>
+            </li>
 
-          <li>
-            <article>
+            <li>
               <figure class="project-card">
                 <img
                   src="images/project8-img.jpg"
@@ -193,11 +188,9 @@ but formatting on save changes it to uppercase-->
                   <p class="project-category">Marketing</p>
                 </figcaption>
               </figure>
-            </article>
-          </li>
+            </li>
 
-          <li>
-            <article>
+            <li>
               <figure class="project-card">
                 <img
                   src="images/project9-img.jpg"
@@ -210,28 +203,32 @@ but formatting on save changes it to uppercase-->
                   <p class="project-category">Apps</p>
                 </figcaption>
               </figure>
-            </article>
-          </li>
-        </ul>
-      </section>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
 
     <footer class="basement">
-      <a class="link logo" href="#">WebStudio</a>
-      <address class="contact">
-        <p>
-          695 Park Ave, New York, NY 10065,<br />
-          United States
-        </p>
-        <ul class="list contacts-footer">
-          <li>
-            <a class="link" href="mailto:info@example.com">info@example.com</a>
-          </li>
-          <li>
-            <a class="link" href="tel:+12127724150">+1 212-772-4150</a>
-          </li>
-        </ul>
-      </address>
+      <div class="container">
+        <a class="link logo" href="#">WebStudio</a>
+        <address class="contact">
+          <p>
+            695 Park Ave, New York, NY 10065,<br />
+            United States
+          </p>
+          <ul class="contacts-footer">
+            <li>
+              <a class="link" href="mailto:info@example.com"
+                >info@example.com</a
+              >
+            </li>
+            <li>
+              <a class="link" href="tel:+12127724150">+1 212-772-4150</a>
+            </li>
+          </ul>
+        </address>
+      </div>
     </footer>
   </body>
 </html>

@@ -16,188 +16,203 @@ but formatting on save changes it to uppercase-->
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <!-- font-family: 'Raleway', sans-serif; -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
     <header>
-      <div class="top-line">
-        <nav>
-          <a class="link logo" href="#">WebStudio</a>
-          <ul class="list">
-            <li><a class="link" href="./index.html">Studio</a></li>
-            <li><a class="link" href="./portfolio.html">Portfolio</a></li>
-            <li><a class="link" href="#">Contacts</a></li>
+      <div class="container">
+        <div class="top-line">
+          <nav>
+            <ul class="top-line-nav">
+              <li><a class="link logo" href="#">WebStudio</a></li>
+              <li><a class="link" href="./index.html">Studio</a></li>
+              <li><a class="link" href="./portfolio.html">Portfolio</a></li>
+              <li><a class="link" href="#">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <ul class="contacts-header">
+            <li>
+              <a class="link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
           </ul>
-        </nav>
-
-        <ul class="list contacts-header">
-          <li>
-            <a class="link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
-          </li>
-        </ul>
+        </div>
       </div>
+    </header>
 
+    <main>
       <section class="banner">
         <h1 class="theme-line">effective solutions for your business</h1>
         <button class="btn btn-request" type="button">
           Request our service
         </button>
       </section>
-    </header>
 
-    <main>
-      <section class="traits">
-        <ul class="list">
-          <li>
-            <p class="trait">attention to details</p>
-            <p class="trait-about">
-              We go into all the details and processes of your business to
-              develop a customized solution.
-            </p>
-          </li>
-          <li>
-            <p class="trait">punctuality</p>
-            <p class="trait-about">
-              With us, you can feel safe and secure. An important principle of
-              the company: respect your time and respect the agreed deadlines.
-            </p>
-          </li>
-          <li>
-            <p class="trait">planning</p>
-            <p class="trait-about">
-              You will be able to observe and participate in every phase of
-              solution development and implementation.
-            </p>
-          </li>
-          <li>
-            <p class="trait">modern technologies</p>
-            <p class="trait-about">
-              We use innovative tools to solve assigned tasks. It's time to
-              simplify work processes.
-            </p>
-          </li>
-        </ul>
+      <section class="section traits">
+        <div class="container">
+          <ul class="traits-list">
+            <li>
+              <p class="trait">attention to details</p>
+              <p class="trait-about">
+                We go into all the details and processes of your business to
+                develop a customized solution.
+              </p>
+            </li>
+            <li>
+              <p class="trait">punctuality</p>
+              <p class="trait-about">
+                With us, you can feel safe and secure. An important principle of
+                the company: respect your time and respect the agreed deadlines.
+              </p>
+            </li>
+            <li>
+              <p class="trait">planning</p>
+              <p class="trait-about">
+                You will be able to observe and participate in every phase of
+                solution development and implementation.
+              </p>
+            </li>
+            <li>
+              <p class="trait">modern technologies</p>
+              <p class="trait-about">
+                We use innovative tools to solve assigned tasks. It's time to
+                simplify work processes.
+              </p>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section class="what-we-do">
-        <h2 class="what-we-do-title">What we do</h2>
-        <ul class="list">
-          <!-- I've tried not to include trailing slashes in self-closing elements of <img>, according to this source:
+      <section class="section what-we-do">
+        <div class="container">
+          <h2 class="what-we-do-title">What we do</h2>
+          <ul class="what-we-do-list">
+            <!-- I've tried not to include trailing slashes in self-closing elements of <img>, according to this source:
             https://codeguide.co/#html-syntax
             but formatting on save keeps reverting them back -->
-          <li class="box-1">
-            <img
-              src="images/box1-img.jpg"
-              alt="hands typing on the keyboard next to the screen of the monitor and the tablet with the code, next to the piece of paper with the drawing of the algorithm"
-              width="370"
-              height="294"
-            />
-          </li>
-          <li class="box-2">
-            <img
-              src="images/box2-img.jpg"
-              alt="hands in front of the monitor and laptop screen, both show page layout options on three smartphone screens; smartphone in one hand"
-              width="370"
-              height="294"
-            />
-          </li>
-          <li class="box-3">
-            <img
-              src="images/box3-img.jpg"
-              alt="hands above the desk with a screen, mouse and keyboard, in one hand a tablet with a hexagonal color scheme"
-              width="370"
-              height="294"
-            />
-          </li>
-        </ul>
+            <li class="box-1">
+              <img
+                src="images/box1-img.jpg"
+                alt="hands typing on the keyboard next to the screen of the monitor and the tablet with the code, next to the piece of paper with the drawing of the algorithm"
+                width="370"
+                height="294"
+              />
+            </li>
+            <li class="box-2">
+              <img
+                src="images/box2-img.jpg"
+                alt="hands in front of the monitor and laptop screen, both show page layout options on three smartphone screens; smartphone in one hand"
+                width="370"
+                height="294"
+              />
+            </li>
+            <li class="box-3">
+              <img
+                src="images/box3-img.jpg"
+                alt="hands above the desk with a screen, mouse and keyboard, in one hand a tablet with a hexagonal color scheme"
+                width="370"
+                height="294"
+              />
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section class="team">
-        <h2 class="team-title">Our Team</h2>
-        <ul class="list team-list">
-          <li class="team-card">
-            <figure>
-              <img
-                src="images/team-card1-img.jpg"
-                alt="smiling brown-haired man with a beard in glasses and a dark shirt"
-                width="270"
-                height="260"
-              />
-              <figcaption>
-                <p class="name">Игорь Демьяненко</p>
-                <p class="trade">Product Designer</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="team-card">
-            <figure>
-              <img
-                src="images/team-card2-img.jpg"
-                alt="smiling woman in glasses with dyed blonde long hair and a dark suit"
-                width="270"
-                height="260"
-              />
-              <figcaption>
-                <p class="name">Ольга Репина</p>
-                <p class="trade">Frontend Developer</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="team-card">
-            <figure>
-              <img
-                src="images/team-card3-img.jpg"
-                alt="smiling brown-haired man with slight stubble in a light-colored shirt"
-                width="270"
-                height="260"
-              />
-              <figcaption>
-                <p class="name">Николай Тарасов</p>
-                <p class="trade">Marketing</p>
-              </figcaption>
-            </figure>
-          </li>
-          <li class="team-card">
-            <figure>
-              <img
-                src="images/team-card4-img.jpg"
-                alt="smiling brunet man in glasses and a dark t-shirt"
-                width="270"
-                height="260"
-              />
-              <figcaption>
-                <p class="name">Михаил Ермаков</p>
-                <p class="trade">UI Designer</p>
-              </figcaption>
-            </figure>
-          </li>
-        </ul>
+      <section class="section team">
+        <div class="container">
+          <h2 class="team-title">Our Team</h2>
+          <ul class="team-list">
+            <li class="team-card">
+              <figure>
+                <img
+                  src="images/team-card1-img.jpg"
+                  alt="smiling brown-haired man with a beard in glasses and a dark shirt"
+                  width="270"
+                  height="260"
+                />
+                <figcaption>
+                  <p class="name">Игорь Демьяненко</p>
+                  <p class="trade">Product Designer</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="team-card">
+              <figure>
+                <img
+                  src="images/team-card2-img.jpg"
+                  alt="smiling woman in glasses with dyed blonde long hair and a dark suit"
+                  width="270"
+                  height="260"
+                />
+                <figcaption>
+                  <p class="name">Ольга Репина</p>
+                  <p class="trade">Frontend Developer</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="team-card">
+              <figure>
+                <img
+                  src="images/team-card3-img.jpg"
+                  alt="smiling brown-haired man with slight stubble in a light-colored shirt"
+                  width="270"
+                  height="260"
+                />
+                <figcaption>
+                  <p class="name">Николай Тарасов</p>
+                  <p class="trade">Marketing</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="team-card">
+              <figure>
+                <img
+                  src="images/team-card4-img.jpg"
+                  alt="smiling brunet man in glasses and a dark t-shirt"
+                  width="270"
+                  height="260"
+                />
+                <figcaption>
+                  <p class="name">Михаил Ермаков</p>
+                  <p class="trade">UI Designer</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
     <footer class="basement">
-      <a class="link logo" href="#">WebStudio</a>
-      <address class="contact">
-        <p>
-          695 Park Ave, New York, NY 10065,<br />
-          United States
-        </p>
-        <ul class="list contacts-footer">
-          <li>
-            <a class="link" href="mailto:info@example.com">info@example.com</a>
-          </li>
-          <li>
-            <a class="link" href="tel:+12127724150">+1 212-772-4150</a>
-          </li>
-        </ul>
-      </address>
+      <div class="container">
+        <a class="link logo" href="#">WebStudio</a>
+        <address class="contact">
+          <p>
+            695 Park Ave, New York, NY 10065,<br />
+            United States
+          </p>
+          <ul class="contacts-footer">
+            <li>
+              <a class="link" href="mailto:info@example.com"
+                >info@example.com</a
+              >
+            </li>
+            <li>
+              <a class="link" href="tel:+12127724150">+1 212-772-4150</a>
+            </li>
+          </ul>
+        </address>
+      </div>
     </footer>
   </body>
 </html>

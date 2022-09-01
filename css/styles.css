@@ -1,4 +1,19 @@
-/* grouping & generic stuff */
+/* groupings & none-by-section */
+/* allowed global resets */
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+ul {
+  padding-inline-start: 0;
+  list-style: none;
+}
+/* end of allowed global resets */
+
 :root {
   --blue: #2196f3;
   --default-text-color: #212121;
@@ -8,6 +23,7 @@
   --white-lesser: #eee;
   --gray-bcg: #f5f4fa;
   --white-alpha: #fff9;
+  --brdr-top: #ececec;
 }
 
 body {
@@ -15,37 +31,39 @@ body {
   color: var(--default-text-color);
 }
 
-.btn {
-  font-family: inherit;
-  border: none;
-  cursor: pointer;
-}
-.btn:hover,
-.btn:focus {
-  color: var(--white);
-  background-color: var(--blue);
+.container {
+  width: 1200px;
+  margin-inline: auto;
 }
 
-.list {
-  list-style: none;
-}
-
-.contacts-header,
-.trait-about {
-  color: var(--gray-text);
+.section {
+  padding-block: 94px;
 }
 
 .banner,
-.what-we-do,
-.team,
-.portfolio {
+.team-card {
   text-align: center;
+}
+
+.traits-list,
+.what-we-do-list,
+.team-list,
+.projects-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
 }
 
 .what-we-do-title,
 .team-title {
   font-size: 36px;
   line-height: 1.16;
+  text-align: center;
+}
+
+.what-we-do-title,
+.team-title {
+  padding-bottom: 50px;
 }
 
 .logo,
@@ -69,14 +87,17 @@ body {
 .contact {
   color: var(--white);
 }
-/* end of grouping & generic stuff */
 
-/* index.html */
-/* header */
-.top-line {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+.btn {
+  font-family: inherit;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  color: var(--white);
+  background-color: var(--blue);
 }
 
 .link {
@@ -84,14 +105,55 @@ body {
   text-decoration: none;
 }
 
-.logo {
-  font: 700 26px/1.19 'Raleway', sans-serif;
-  color: var(--blue);
-}
-
 .link:hover,
 .link:focus {
   color: var(--blue);
+}
+
+.contacts-header,
+.trait-about {
+  color: var(--gray-text);
+}
+
+.logo {
+  padding-right: 97px;
+  font: 700 26px/1.19 'Raleway', sans-serif;
+  color: var(--blue);
+}
+/* end of groupings & none-by-section */
+
+/* index.html */
+/* header */
+header {
+  border-bottom: 1px solid var(--brdr-top);
+}
+
+.top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 32px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.top-line-nav {
+  display: flex;
+  align-items: center;
+}
+.top-line-nav li:nth-of-type(2) {
+  padding-right: 53px;
+}
+.top-line-nav li:nth-of-type(3) {
+  padding-right: 69px;
+}
+
+.contacts-header {
+  display: flex;
+}
+.contacts-header li:nth-of-type(1) {
+  padding-right: 50px;
 }
 
 .banner {
@@ -99,6 +161,8 @@ body {
 }
 
 .theme-line {
+  padding-top: 200px;
+  padding-inline: 452px;
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
@@ -107,6 +171,8 @@ body {
 }
 
 .btn-request {
+  margin: 30px 700px 200px;
+  padding: 10px 19px 10px 20px;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.875;
@@ -116,6 +182,10 @@ body {
 /* end of header */
 
 /* .traits section */
+.traits {
+  padding-bottom: 6px;
+}
+
 .trait {
   font-weight: 700;
   line-height: 1.14;
@@ -137,11 +207,18 @@ body {
   background-color: var(--white);
 }
 
+.team-card figure {
+  margin: 0;
+}
+
 .name {
+  padding-top: 30px;
+  padding-bottom: 10px;
   font-weight: 500;
 }
 
 .trade {
+  padding-bottom:30px;
   color: var(--gray-text);
 }
 /* end of .team section */
@@ -151,38 +228,71 @@ body {
   background-color: var(--dark);
 }
 
+.basement .logo {
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 9px;
+}
+
 .contact {
   font-style: normal;
   line-height: 1.71;
 }
 
 .contacts-footer {
+  padding-bottom: 60px;
   color: var(--white-alpha);
 }
 /* end of footer */
 /* end of index.html */
 
 /* portfolio.html */
-/* .portfolio section */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
 .btn-filter {
+  padding-block: 6px;
+  padding-inline: 26px;
+  margin-bottom: 50px;
   font-weight: 500;
   line-height: 1.625;
   color: var(--default-text-color);
   background-color: var(--gray-bcg);
 }
+.btn-filter.wider {
+  padding-inline: 53px;
+}
+
+.projects-list {
+  flex-wrap: wrap;
+}
 
 .project-card {
+  margin: 0;
   border: 1px solid var(--white-lesser);
 }
 
+/* .project-card figcaption{
+  border-bottom: 1px solid var(--white-lesser);
+  border-left: 1px solid var(--white-lesser);
+  border-right: 1px solid var(--white-lesser);
+} */
+
 .project-title {
+  padding-top: 20px;
+  padding-bottom: 4px;
+  padding-left: 24px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 
 .project-category {
+  padding-bottom: 20px;
+  padding-left: 24px;
   line-height: 1.875;
 }
-/* .portfolio section */
 /* end of portfolio.html */
