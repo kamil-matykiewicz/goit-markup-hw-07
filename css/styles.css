@@ -40,11 +40,6 @@ body {
   padding-block: 94px;
 }
 
-.banner,
-.team-card {
-  text-align: center;
-}
-
 .traits-list,
 .what-we-do-list,
 .team-list,
@@ -58,7 +53,6 @@ body {
 .team-title {
   font-size: 36px;
   line-height: 1.16;
-  text-align: center;
 }
 
 .what-we-do-title,
@@ -120,6 +114,12 @@ body {
   font: 700 26px/1.19 'Raleway', sans-serif;
   color: var(--blue);
 }
+
+.banner,
+.what-we-do-title,
+.team {
+  text-align: center;
+}
 /* end of groupings & none-by-section */
 
 /* index.html */
@@ -155,14 +155,21 @@ header {
 .contacts-header li:nth-of-type(1) {
   padding-right: 50px;
 }
+/* end of header */
 
+/* .banner section */
 .banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  height: 600px;
+  padding: 200px 452px;
   background-color: var(--dark);
 }
 
 .theme-line {
-  padding-top: 200px;
-  padding-inline: 452px;
+  width: 696px;
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
@@ -171,15 +178,16 @@ header {
 }
 
 .btn-request {
-  margin: 30px 700px 200px;
-  padding: 10px 19px 10px 20px;
+  width: 200px;
+  padding-block: 10px;
+  padding-inline: 19px;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.875;
   letter-spacing: 0.06em;
   background-color: var(--blue);
 }
-/* end of header */
+/* end of .banner section */
 
 /* .traits section */
 .traits {
@@ -218,7 +226,7 @@ header {
 }
 
 .trade {
-  padding-bottom:30px;
+  padding-bottom: 30px;
   color: var(--gray-text);
 }
 /* end of .team section */
@@ -272,14 +280,20 @@ header {
 
 .project-card {
   margin: 0;
-  border: 1px solid var(--white-lesser);
 }
 
-/* .project-card figcaption{
+.project-card img {
+  /* this property is in here to remove a thin gap between <img> & <figcaption>;
+  the following rule would work the same way:
+  .project-card{display:flex;flex-direction:column;} */
+  display: block;
+}
+
+.project-card figcaption {
   border-bottom: 1px solid var(--white-lesser);
   border-left: 1px solid var(--white-lesser);
   border-right: 1px solid var(--white-lesser);
-} */
+}
 
 .project-title {
   padding-top: 20px;
