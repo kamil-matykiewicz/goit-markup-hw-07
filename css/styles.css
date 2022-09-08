@@ -17,12 +17,15 @@ ul {
 :root {
   --blue: #2196f3;
   --default-text-color: #212121;
-  --gray-text: #757575;
   --dark: #2f303a;
+  --dark-rgb: 47 48 58;
+  --gray-text: #757575;
+  --gray-icon: #afb1b8;
   --white: #fff;
   --white-lesser: #eee;
+  --white-alpha-10: #ffffff1a;
   --gray-bcg: #f5f4fa;
-  --white-alpha: #fff9;
+  --white-alpha-60: #fff9;
   --brdr-top: #ececec;
 }
 
@@ -43,14 +46,16 @@ body {
 .traits-list,
 .what-we-do-list,
 .team-list,
-.projects-list {
+.projects-list,
+.customers-list {
   display: flex;
   justify-content: space-around;
   gap: 30px;
 }
 
 .what-we-do-title,
-.team-title {
+.team-title,
+.customers-title {
   font-size: 36px;
   line-height: 1.16;
 }
@@ -64,21 +69,39 @@ body {
 .traits,
 .what-we-do-title,
 .team,
+.customers-title,
 .contact,
 .btn-filter,
-.project-category {
+.project-category,
+.basement-social {
   letter-spacing: 0.03em;
 }
 
 .top-line,
 .traits,
-.contact {
+.place-and-contacts,
+.basement-social {
   font-size: 14px;
+}
+
+.banner,
+.what-we-do-title,
+.team,
+.customers-title {
+  text-align: center;
+}
+
+.trait,
+.basement-social {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 
 .theme-line,
 .btn-request,
-.contact {
+.place-and-contacts,
+.basement-social {
   color: var(--white);
 }
 
@@ -100,25 +123,42 @@ body {
 }
 
 .link:hover,
-.link:focus {
+.link:focus,
+.contacts-header li:hover,
+.contacts-header li:focus {
+  color: var(--blue);
+}
+.icon-header:focus {
   color: var(--blue);
 }
 
 .contacts-header,
-.trait-about {
+.trait-about,
+.trade {
   color: var(--gray-text);
 }
 
 .logo {
-  padding-right: 97px;
+  margin-right: 97px;
   font: 700 26px/1.19 'Raleway', sans-serif;
   color: var(--blue);
 }
 
-.banner,
-.what-we-do-title,
-.team {
-  text-align: center;
+.icon-social-team,
+.icon-customer {
+  fill: var(--gray-icon);
+}
+
+.team-social-link:hover,
+.team-social-link:focus,
+.basement-social-link:hover,
+.basement-social-link:focus {
+  background-color: var(--blue);
+}
+
+.team-social-link:hover .icon-social-team,
+.team-social-link:focus .icon-social-team {
+  fill: var(--white);
 }
 /* end of groupings & none-by-section */
 
@@ -152,8 +192,18 @@ header {
 .contacts-header {
   display: flex;
 }
+
+.contacts-header li {
+  display: flex;
+  align-items: center;
+}
+
 .contacts-header li:nth-of-type(1) {
   padding-right: 50px;
+}
+
+.contacts-header svg {
+  margin-right: 10px;
 }
 /* end of header */
 
@@ -165,7 +215,14 @@ header {
   row-gap: 30px;
   height: 600px;
   padding: 200px 452px;
-  background-color: var(--dark);
+  background-image: linear-gradient(
+      rgb(var(--dark-rgb) / 0.4),
+      rgb(var(--dark-rgb) / 0.4)
+    ),
+    url(../images/banner-img.jpg);
+  background-size: 1600px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .theme-line {
@@ -194,10 +251,17 @@ header {
   padding-bottom: 6px;
 }
 
-.trait {
-  font-weight: 700;
-  line-height: 1.14;
-  text-transform: uppercase;
+.traits-list li {
+  flex-basis: calc((100%-90px) / 4);
+}
+
+.icon-trait {
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--gray-bcg);
 }
 
 .trait-about {
@@ -225,31 +289,88 @@ header {
   font-weight: 500;
 }
 
-.trade {
-  padding-bottom: 30px;
-  color: var(--gray-text);
+.team-social-list {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 16px 32px 30px;
+}
+
+.team-social-link {
+  display: flex;
+  padding: 12px;
+  border-radius: 50%;
 }
 /* end of .team section */
+
+/* .customers sections */
+.customers-list {
+  margin-top: 50px;
+}
+
+.customer-link {
+  display: block;
+  padding: 16px 32px;
+  border: 1px solid var(--gray-icon);
+  border-radius: 4px;
+}
+
+.customer-link:hover,
+.customer-link:focus {
+  border: 1px solid var(--blue);
+}
+.customer-link:hover .icon-customer,
+.customer-link:focus .icon-customer {
+  fill: var(--blue);
+}
+/* end of .customers sections */
 
 /* footer */
 .basement {
   background-color: var(--dark);
 }
 
+.container-footer {
+  display: flex;
+  gap: 70px;
+}
+
+.basement-address {
+  padding-block: 60px;
+}
+
 .basement .logo {
   display: block;
-  padding-top: 60px;
   padding-bottom: 9px;
 }
 
-.contact {
+.place-and-contacts {
   font-style: normal;
   line-height: 1.71;
 }
 
 .contacts-footer {
-  padding-bottom: 60px;
   color: var(--white-alpha);
+}
+
+.basement-social {
+  padding-top: 75px;
+}
+
+.basement-social-list {
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.basement-social-link {
+  display: flex;
+  padding: 12px;
+  background-color: var(--white-alpha-10);
+  border-radius: 50%;
+}
+
+.icon-social-basement {
+  fill: var(--white);
 }
 /* end of footer */
 /* end of index.html */
