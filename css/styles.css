@@ -139,7 +139,7 @@ body {
 }
 
 .logo {
-  margin-right: 97px;
+  /* margin-right: 97px; */
   font: 700 26px/1.19 'Raleway', sans-serif;
   color: var(--blue);
 }
@@ -181,12 +181,11 @@ header {
 .top-line-nav {
   display: flex;
   align-items: center;
+  gap: 63px;
 }
-.top-line-nav li:nth-of-type(2) {
-  padding-right: 53px;
-}
-.top-line-nav li:nth-of-type(3) {
-  padding-right: 69px;
+
+.top-line-nav .logo {
+  margin-right: 30px;
 }
 
 .contacts-header {
