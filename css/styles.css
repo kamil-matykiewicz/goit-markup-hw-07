@@ -431,22 +431,22 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--modal-backdrop-background);
-
-  /* stuff for transition effect, works only for opening the modal with button */
   transform: scale(1);
   transition: transform var(--time-timingFunction),
-    opacity var(--time-timingFunction);
+    opacity var(--time-timingFunction), visibility var(--time-timingFunction);
+  width: 100vw;
+  height: 100vh;
   opacity: 1;
+  /* does fairly the same as visibility */
   visibility: visible;
+  background-color: var(--modal-backdrop-background);
 }
 .is-hidden {
   transform: scale(0);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  /* Co do pytania o pointer-events: none. Gdybyś do animacji używał tylko opacity (zrezygnował z visibility oraz scale) to bez pointer-events: none nie dałoby się kliknąć w nic na ekranie. Działoby się tak ponieważ backdrop byłby zawsze obecny na ekranie i blokowałby wszystkie inne kliknięcia. Bo opacity(0) sprawia tylko tyle, że backdrop  jest przezroczysty ale go nie ukrywa i on dalej tam jest i blokuje cały ekran. Więc pointer-events: none jest takim jakby zabezpieczeniem, na wszelki wypadek */
 }
 
 .modal {
