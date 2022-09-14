@@ -469,6 +469,7 @@ header {
   padding-inline: 0;
   background-color: var(--white);
   border: none;
+  cursor: pointer;
 }
 /* end of modal for "Request our service" button */
 /* end of index.html */
