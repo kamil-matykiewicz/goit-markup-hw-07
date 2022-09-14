@@ -4,7 +4,8 @@ h1,
 h2,
 h3,
 ul,
-p {
+p,
+figure {
   margin: 0;
 }
 
@@ -16,17 +17,21 @@ ul {
 
 :root {
   --blue: #2196f3;
+  --blue-alpha-90: #2196f3e6;
   --default-text-color: #212121;
+  --modal-backdrop-background: #00000033;
   --dark: #2f303a;
+  --dark-alpha-80: #2f303acc;
   --dark-rgb: 47 48 58;
   --gray-text: #757575;
   --gray-icon: #afb1b8;
-  --white: #fff;
-  --white-lesser: #eee;
-  --white-alpha-10: #ffffff1a;
   --gray-bcg: #f5f4fa;
+  --white: #fff;
+  --white-alpha-10: #ffffff1a;
   --white-alpha-60: #fff9;
+  --white-lesser: #eee;
   --brdr-top: #ececec;
+  --time-timingFunction: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -73,26 +78,31 @@ body {
 .contact,
 .btn-filter,
 .project-category,
-.basement-social {
+.basement-social,
+.box-caption,
+.project-card-image-overlay {
   letter-spacing: 0.03em;
 }
 
 .top-line,
 .traits,
 .place-and-contacts,
-.basement-social {
+.basement-social,
+.box-caption {
   font-size: 14px;
 }
 
 .banner,
 .what-we-do-title,
 .team,
-.customers-title {
+.customers-title,
+.box-caption {
   text-align: center;
 }
 
 .trait,
-.basement-social {
+.basement-social,
+.box-caption {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -111,17 +121,17 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
-.btn:hover,
-.btn:focus {
-  color: var(--white);
-  background-color: var(--blue);
-}
 
 .link {
   color: currentColor;
   text-decoration: none;
 }
 
+.link,
+.contacts-header,
+.icon-header {
+  transition: color var(--time-timingFunction);
+}
 .link:hover,
 .link:focus,
 .contacts-header li:hover,
@@ -139,7 +149,6 @@ body {
 }
 
 .logo {
-  /* margin-right: 97px; */
   font: 700 26px/1.19 'Raleway', sans-serif;
   color: var(--blue);
 }
@@ -149,6 +158,10 @@ body {
   fill: var(--gray-icon);
 }
 
+.team-social-link,
+.basement-social-link {
+  transition: background-color var(--time-timingFunction);
+}
 .team-social-link:hover,
 .team-social-link:focus,
 .basement-social-link:hover,
@@ -156,10 +169,14 @@ body {
   background-color: var(--blue);
 }
 
+.team-social-link .icon-social-team {
+  transition: fill var(--time-timingFunction);
+}
 .team-social-link:hover .icon-social-team,
 .team-social-link:focus .icon-social-team {
   fill: var(--white);
 }
+
 /* end of groupings & none-by-section */
 
 /* index.html */
@@ -172,7 +189,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 32px;
+  height: 80px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -186,6 +203,26 @@ header {
 
 .top-line-nav .logo {
   margin-right: 30px;
+}
+
+.top-line-nav .link {
+  display: flex;
+  line-height: 80px;
+}
+
+.active-site {
+  position: relative;
+}
+.active-site::after {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  display: inline-block;
+  width: 60px;
+  height: 4px;
+  content: '';
+  background-color: var(--blue);
+  border-radius: 2px;
 }
 
 .contacts-header {
@@ -268,6 +305,20 @@ header {
 }
 /* end of .traits section */
 
+/* .what-we-do section */
+.box-figure {
+  position: relative;
+}
+.box-caption {
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  padding-block: 27px;
+  color: var(--white);
+  background-color: var(--dark-alpha-80);
+}
+/* end of .what-we-do section */
+
 /* .team section */
 .team {
   line-height: 1.1875;
@@ -279,10 +330,6 @@ header {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-
-.team-card figure {
-  margin: 0;
 }
 
 .name {
@@ -314,11 +361,14 @@ header {
   padding: 16px 32px;
   border: 1px solid var(--gray-icon);
   border-radius: 4px;
+  transition: border var(--time-timingFunction);
 }
-
 .customer-link:hover,
 .customer-link:focus {
   border: 1px solid var(--blue);
+}
+.customer-link .icon-customer {
+  transition: fill var(--time-timingFunction);
 }
 .customer-link:hover .icon-customer,
 .customer-link:focus .icon-customer {
@@ -375,6 +425,52 @@ header {
   fill: var(--white);
 }
 /* end of footer */
+
+/* modal for "Request our service" button */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--modal-backdrop-background);
+
+  /* stuff for transition effect, works only for opening the modal with button */
+  transform: scale(1);
+  transition: transform var(--time-timingFunction),
+    opacity var(--time-timingFunction);
+  opacity: 1;
+  visibility: visible;
+}
+.is-hidden {
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding-inline: 0;
+  background-color: var(--white);
+  border: none;
+}
+/* end of modal for "Request our service" button */
 /* end of index.html */
 
 /* portfolio.html */
@@ -392,13 +488,16 @@ header {
   line-height: 1.625;
   color: var(--default-text-color);
   background-color: var(--gray-bcg);
+  transition: color var(--time-timingFunction),
+    background-color var(--time-timingFunction);
 }
 .btn-filter.wider {
   padding-inline: 53px;
 }
-
 .btn-filter:hover,
 .btn-filter:focus {
+  color: var(--white);
+  background-color: var(--blue);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -408,22 +507,42 @@ header {
 }
 
 .project-card {
-  margin: 0;
+  transition: box-shadow var(--time-timingFunction);
 }
-
 .project-card:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-card img {
+.project-card-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card-image {
   /* this property is in here to remove a thin gap between <img> & <figcaption>;
   the following rule would work the same way:
   .project-card{display:flex;flex-direction:column;} */
   display: block;
 }
 
-.project-card figcaption {
+.project-card-image-overlay {
+  position: absolute;
+  bottom: -1px;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform var(--time-timingFunction);
+  padding: 63px 24px 91px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--white);
+  background-color: var(--blue-alpha-90);
+}
+.project-card:hover .project-card-image-overlay {
+  transform: translateY(0);
+}
+
+.project-card-caption {
   border-bottom: 1px solid var(--white-lesser);
   border-left: 1px solid var(--white-lesser);
   border-right: 1px solid var(--white-lesser);
