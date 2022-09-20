@@ -393,7 +393,7 @@ but formatting on save changes it to uppercase-->
     </main>
 
     <footer class="basement">
-      <div class="container container-footer">
+      <div class="container container-basement">
         <div class="basement-address">
           <a class="link logo" href="#">WebStudio</a>
           <address class="place-and-contacts">
@@ -401,7 +401,7 @@ but formatting on save changes it to uppercase-->
               695 Park Ave, New York, NY 10065,<br />
               United States
             </p>
-            <ul class="contacts-footer">
+            <ul class="contacts-basement">
               <li>
                 <a class="link" href="mailto:info@example.com"
                   >info@example.com</a
@@ -446,6 +446,26 @@ but formatting on save changes it to uppercase-->
             </li>
           </ul>
         </div>
+        <div class="basement-form">
+          <form action="#">
+            <label class="basement-form-label" for="mail-newslttr"
+              >subscribe to the newsletter</label
+            >
+            <input
+              class="basement-form-input"
+              id="mail-newslttr"
+              name="email"
+              type="email"
+              placeholder="E-mail"
+            />
+            <button class="btn btn-newslttr" type="submit">
+              subscribe
+              <svg width="24" height="24">
+                <use href="images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -453,10 +473,59 @@ but formatting on save changes it to uppercase-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn-close" data-modal-close type="button">
-          <svg width="30" height="30">
+          <svg class="btn-close-icon" width="18" height="18">
             <use href="images/icons.svg#close"></use>
           </svg>
         </button>
+        <div class="container-modal-form">
+          <h3 class="form-heading">
+            Leave your information and we'll call you back
+          </h3>
+          <form class="modal-form" action="#">
+            <label class="modal-form-label"
+              >Name
+              <svg class="modal-form-icon" width="18" height="18">
+                <use href="images/icons.svg#person"></use>
+              </svg>
+              <input class="modal-form-input" name="name" type="text" />
+            </label>
+            <label class="modal-form-label"
+              >Telephone<svg class="modal-form-icon" width="18" height="18">
+                <use href="images/icons.svg#telephone"></use>
+              </svg>
+              <input class="modal-form-input" name="telephone" type="tel" />
+            </label>
+            <label class="modal-form-label"
+              >E-mail<svg class="modal-form-icon" width="18" height="18">
+                <use href="images/icons.svg#email"></use>
+              </svg>
+              <input class="modal-form-input" name="email" type="email" />
+            </label>
+            <label class="modal-form-label"
+              >Comments
+              <textarea
+                class="modal-form-input modal-form-text-area"
+                name="comment"
+                placeholder="Enter the text"
+              ></textarea>
+            </label>
+            <div class="container-modal-form-checkbox">
+              <input
+                class="modal-form-checkbox-input"
+                id="chbox"
+                name="terms-acceptance"
+                type="checkbox"
+                value="accepted"
+              />
+              <label class="modal-form-checkbox-label" for="chbox">
+                I declare that I accept the
+                <a class="checkbox-label-link" href="#">Regulations</a> and the
+                <a class="checkbox-label-link" href="#">Privacy Policy</a>
+              </label>
+            </div>
+            <button class="btn btn-modal-send" type="submit">Send</button>
+          </form>
+        </div>
       </div>
     </div>
 
