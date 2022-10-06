@@ -1,0 +1,68 @@
+/* groupings & not-by-section */
+/* allowed global resets */
+h1,
+h2,
+h3,
+ul,
+p,
+figure {
+  margin: 0;
+}
+
+ul {
+  padding-inline-start: 0;
+  list-style: none;
+}
+/* end of allowed global resets */
+
+@import 'utils/variables';
+@import 'utils/mixins';
+
+body {
+  @include font-main;
+}
+
+.container {
+  width: 1200px;
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 94px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.btn {
+  font-family: inherit;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.link {
+  color: currentColor;
+  text-decoration: none;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
+
+.logo {
+  @include typography-logo;
+}
+/* end of groupings & not-by-section */
+
+// by section:
+@import 'components/page-header';
+@import 'components/page-index_main';
+@import 'components/page-footer';
+@import 'components/page-index_modal';
+@import 'components/page-portfolio_main';

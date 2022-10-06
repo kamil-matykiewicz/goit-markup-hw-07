@@ -20,7 +20,7 @@ but formatting on save changes it to uppercase-->
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
   </head>
 
   <body>
@@ -28,27 +28,33 @@ but formatting on save changes it to uppercase-->
       <div class="container">
         <div class="top-line">
           <nav>
-            <ul class="top-line-nav">
-              <li><a class="link logo" href="#">WebStudio</a></li>
+            <ul class="nav">
               <li>
-                <a class="link active-site" href="./index.html">Studio</a>
+                <a class="link nav__link logo nav__logo" href="#">WebStudio</a>
               </li>
-              <li><a class="link" href="./portfolio.html">Portfolio</a></li>
-              <li><a class="link" href="#">Contacts</a></li>
+              <li>
+                <a class="link nav__link nav__link--active" href="./index.html"
+                  >Studio</a
+                >
+              </li>
+              <li>
+                <a class="link nav__link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li><a class="link nav__link" href="#">Contacts</a></li>
             </ul>
           </nav>
 
-          <ul class="contacts-header">
-            <li>
-              <svg class="icon-header" width="16" height="12" tabindex="0">
+          <ul class="top-line__contacts">
+            <li class="top-line__item">
+              <svg class="top-line__icon" width="16" height="12" tabindex="0">
                 <use href="images/icons.svg#envelope"></use>
               </svg>
               <a class="link" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
-            <li>
-              <svg class="icon-header" width="10" height="16" tabindex="0">
+            <li class="top-line__item">
+              <svg class="top-line__icon" width="10" height="16" tabindex="0">
                 <use href="images/icons.svg#cell-phone"></use>
               </svg>
               <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -60,51 +66,51 @@ but formatting on save changes it to uppercase-->
 
     <main>
       <section class="banner">
-        <h1 class="theme-line">effective solutions for your business</h1>
-        <button class="btn btn-request" data-modal-open type="button">
+        <h1 class="banner__title">effective solutions for your business</h1>
+        <button class="btn banner__btn" data-modal-open type="button">
           Request our service
         </button>
       </section>
 
       <section class="section traits">
         <div class="container">
-          <ul class="traits-list">
-            <li>
-              <svg class="icon-trait" width="70" height="70">
+          <ul class="list">
+            <li class="traits__item">
+              <svg class="traits__icon" width="70" height="70">
                 <use href="images/icons.svg#antenna"></use>
               </svg>
-              <p class="trait">attention to details</p>
-              <p class="trait-about">
+              <p class="traits__trait">attention to details</p>
+              <p class="traits__trait-info">
                 We go into all the details and processes of your business to
                 develop a customized solution.
               </p>
             </li>
-            <li>
-              <svg class="icon-trait" width="70" height="70">
+            <li class="traits__item">
+              <svg class="traits__icon" width="70" height="70">
                 <use href="images/icons.svg#clock"></use>
               </svg>
-              <p class="trait">punctuality</p>
-              <p class="trait-about">
+              <p class="traits__trait">punctuality</p>
+              <p class="traits__trait-info">
                 With us, you can feel safe and secure. An important principle of
                 the company: respect your time and respect the agreed deadlines.
               </p>
             </li>
-            <li>
-              <svg class="icon-trait" width="70" height="70">
+            <li class="traits__item">
+              <svg class="traits__icon" width="70" height="70">
                 <use href="images/icons.svg#diagram"></use>
               </svg>
-              <p class="trait">planning</p>
-              <p class="trait-about">
+              <p class="traits__trait">planning</p>
+              <p class="traits__trait-info">
                 You will be able to observe and participate in every phase of
                 solution development and implementation.
               </p>
             </li>
-            <li>
-              <svg class="icon-trait" width="70" height="70">
+            <li class="traits__item">
+              <svg class="traits__icon" width="70" height="70">
                 <use href="images/icons.svg#astronaut"></use>
               </svg>
-              <p class="trait">modern technologies</p>
-              <p class="trait-about">
+              <p class="traits__trait">modern technologies</p>
+              <p class="traits__trait-info">
                 We use innovative tools to solve assigned tasks. It's time to
                 simplify work processes.
               </p>
@@ -113,44 +119,50 @@ but formatting on save changes it to uppercase-->
         </div>
       </section>
 
-      <section class="section what-we-do">
+      <section class="section products-types">
         <div class="container">
-          <h2 class="what-we-do-title">What we do</h2>
-          <ul class="what-we-do-list">
+          <h2 class="products-types__heading">What we do</h2>
+          <ul class="list">
             <!-- I've tried not to include trailing slashes in self-closing elements of <img>, according to this source:
             https://codeguide.co/#html-syntax
             but formatting on save keeps reverting them back -->
-            <li class="box-1">
-              <figure class="box-figure">
+            <li>
+              <figure class="products-types__figure">
                 <img
                   src="images/box1-img.jpg"
                   alt="hands typing on the keyboard next to the screen of the monitor and the tablet with the code, next to the piece of paper with the drawing of the algorithm"
                   width="370"
                   height="294"
                 />
-                <figcaption class="box-caption">desktop apps</figcaption>
+                <figcaption class="products-types__caption">
+                  desktop apps
+                </figcaption>
               </figure>
             </li>
-            <li class="box-2">
-              <figure class="box-figure">
+            <li>
+              <figure class="products-types__figure">
                 <img
                   src="images/box2-img.jpg"
                   alt="hands in front of the monitor and laptop screen, both show page layout options on three smartphone screens; smartphone in one hand"
                   width="370"
                   height="294"
                 />
-                <figcaption class="box-caption">mobile apps</figcaption>
+                <figcaption class="products-types__caption">
+                  mobile apps
+                </figcaption>
               </figure>
             </li>
-            <li class="box-3">
-              <figure class="box-figure">
+            <li>
+              <figure class="products-types__figure">
                 <img
                   src="images/box3-img.jpg"
                   alt="hands above the desk with a screen, mouse and keyboard, in one hand a tablet with a hexagonal color scheme"
                   width="370"
                   height="294"
                 />
-                <figcaption class="box-caption">design solutions</figcaption>
+                <figcaption class="products-types__caption">
+                  design solutions
+                </figcaption>
               </figure>
             </li>
           </ul>
@@ -159,9 +171,9 @@ but formatting on save changes it to uppercase-->
 
       <section class="section team">
         <div class="container">
-          <h2 class="team-title">Our Team</h2>
-          <ul class="team-list">
-            <li class="team-card">
+          <h2 class="team__title">Our Team</h2>
+          <ul class="list">
+            <li class="team__card">
               <figure>
                 <img
                   src="images/team-card1-img.jpg"
@@ -170,42 +182,42 @@ but formatting on save changes it to uppercase-->
                   height="260"
                 />
                 <figcaption>
-                  <p class="name">Игорь Демьяненко</p>
-                  <p class="trade">Product Designer</p>
+                  <p class="team__name">Игорь Демьяненко</p>
+                  <p class="team__trade">Product Designer</p>
                 </figcaption>
               </figure>
-              <ul class="team-social-list">
+              <ul class="team__social-list">
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#linkedin"></use>
                     </svg>
                   </a>
                 </li>
               </ul>
             </li>
-            <li class="team-card">
+            <li class="team__card">
               <figure>
                 <img
                   src="images/team-card2-img.jpg"
@@ -214,42 +226,42 @@ but formatting on save changes it to uppercase-->
                   height="260"
                 />
                 <figcaption>
-                  <p class="name">Ольга Репина</p>
-                  <p class="trade">Frontend Developer</p>
+                  <p class="team__name">Ольга Репина</p>
+                  <p class="team__trade">Frontend Developer</p>
                 </figcaption>
               </figure>
-              <ul class="team-social-list">
+              <ul class="team__social-list">
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#linkedin"></use>
                     </svg>
                   </a>
                 </li>
               </ul>
             </li>
-            <li class="team-card">
+            <li class="team__card">
               <figure>
                 <img
                   src="images/team-card3-img.jpg"
@@ -258,42 +270,42 @@ but formatting on save changes it to uppercase-->
                   height="260"
                 />
                 <figcaption>
-                  <p class="name">Николай Тарасов</p>
-                  <p class="trade">Marketing</p>
+                  <p class="team__name">Николай Тарасов</p>
+                  <p class="team__trade">Marketing</p>
                 </figcaption>
               </figure>
-              <ul class="team-social-list">
+              <ul class="team__social-list">
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#linkedin"></use>
                     </svg>
                   </a>
                 </li>
               </ul>
             </li>
-            <li class="team-card">
+            <li class="team__card">
               <figure>
                 <img
                   src="images/team-card4-img.jpg"
@@ -302,35 +314,35 @@ but formatting on save changes it to uppercase-->
                   height="260"
                 />
                 <figcaption>
-                  <p class="name">Михаил Ермаков</p>
-                  <p class="trade">UI Designer</p>
+                  <p class="team__name">Михаил Ермаков</p>
+                  <p class="team__trade">UI Designer</p>
                 </figcaption>
               </figure>
-              <ul class="team-social-list">
+              <ul class="team__social-list">
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#instagram"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#twitter"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#facebook"></use>
                     </svg>
                   </a>
                 </li>
                 <li>
-                  <a class="link team-social-link" href="#">
-                    <svg class="icon-social-team" width="20" height="20">
+                  <a class="link team__social-link" href="#">
+                    <svg class="team__icon-social" width="20" height="20">
                       <use href="images/icons.svg#linkedin"></use>
                     </svg>
                   </a>
@@ -343,46 +355,46 @@ but formatting on save changes it to uppercase-->
 
       <section class="section customers">
         <div class="container">
-          <h2 class="customers-title">Regular Customers</h2>
-          <ul class="customers-list">
+          <h2 class="customers__title">Regular Customers</h2>
+          <ul class="list customers__list">
             <li>
-              <a class="customer-link" href="#">
-                <svg class="icon-customer" width="106" height="60">
+              <a class="customers__link" href="#">
+                <svg class="customers__icon" width="106" height="60">
                   <use href="images/icons.svg#customer1"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="customer-link" href="#">
-                <svg class="icon-customer" width="106" height="60">
+              <a class="customers__link" href="#">
+                <svg class="customers__icon" width="106" height="60">
                   <use href="images/icons.svg#customer2"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="customer-link" href="#">
-                <svg class="icon-customer" width="106" height="60">
+              <a class="customers__link" href="#">
+                <svg class="customers__icon" width="106" height="60">
                   <use href="images/icons.svg#customer3"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="customer-link" href="#">
-                <svg class="icon-customer" width="106" height="60">
+              <a class="customers__link" href="#">
+                <svg class="customers__icon" width="106" height="60">
                   <use href="images/icons.svg#customer4"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="customer-link" href="#">
-                <svg class="icon-customer" width="106" height="60">
+              <a class="customers__link" href="#">
+                <svg class="customers__icon" width="106" height="60">
                   <use href="images/icons.svg#customer5"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="customer-link" href="#">
-                <svg class="icon-customer" width="106" height="60">
+              <a class="customers__link" href="#">
+                <svg class="customers__icon" width="106" height="60">
                   <use href="images/icons.svg#customer6"></use>
                 </svg>
               </a>
@@ -393,15 +405,15 @@ but formatting on save changes it to uppercase-->
     </main>
 
     <footer class="basement">
-      <div class="container container-basement">
-        <div class="basement-address">
+      <div class="container basement">
+        <div class="basement__contacts">
           <a class="link logo" href="#">WebStudio</a>
-          <address class="place-and-contacts">
+          <address class="basement__address">
             <p>
               695 Park Ave, New York, NY 10065,<br />
               United States
             </p>
-            <ul class="contacts-basement">
+            <ul class="basement__tele-mail">
               <li>
                 <a class="link" href="mailto:info@example.com"
                   >info@example.com</a
@@ -413,52 +425,53 @@ but formatting on save changes it to uppercase-->
             </ul>
           </address>
         </div>
-        <div class="basement-social">
+        <div class="basement__social">
           <p>find us on</p>
-          <ul class="basement-social-list">
+          <ul class="basement__social-list">
             <li>
-              <a class="basement-social-link" href="#">
-                <svg class="icon-social-basement" width="20" height="20">
+              <a class="basement__social-link" href="#">
+                <svg class="basement__icon-social" width="20" height="20">
                   <use href="images/icons.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="basement-social-link" href="#">
-                <svg class="icon-social-basement" width="20" height="20">
+              <a class="basement__social-link" href="#">
+                <svg class="basement__icon-social" width="20" height="20">
                   <use href="images/icons.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="basement-social-link" href="#">
-                <svg class="icon-social-basement" width="20" height="20">
+              <a class="basement__social-link" href="#">
+                <svg class="basement__icon-social" width="20" height="20">
                   <use href="images/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="basement-social-link" href="#">
-                <svg class="icon-social-basement" width="20" height="20">
+              <a class="basement__social-link" href="#">
+                <svg class="basement__icon-social" width="20" height="20">
                   <use href="images/icons.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div class="basement-form">
+        <div class="basement__form">
           <form action="#">
-            <label class="basement-form-label" for="mail-newslttr"
+            <label class="basement__form-label" for="mail-newslttr"
               >subscribe to the newsletter</label
             >
             <input
-              class="basement-form-input"
+              class="basement__form-input"
               id="mail-newslttr"
               name="email"
               type="email"
+              required
               placeholder="E-mail"
             />
-            <button class="btn btn-newslttr" type="submit">
+            <button class="btn basement__btn" type="submit">
               subscribe
               <svg width="24" height="24">
                 <use href="images/icons.svg#send"></use>
@@ -469,61 +482,66 @@ but formatting on save changes it to uppercase-->
       </div>
     </footer>
 
-    <!-- [class=backdrop class=is-hidden data-modal]>[class=modal]>button[class=btn-close data-modal-close type=button] -->
+    <!-- [class=backdrop class=is-hidden data-modal]>[class=modal]>button[class=modal__btn-close data-modal-close type=button] -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="btn-close" data-modal-close type="button">
-          <svg class="btn-close-icon" width="18" height="18">
+        <button class="modal__btn-close" data-modal-close type="button">
+          <svg class="modal__btn-icon" width="18" height="18">
             <use href="images/icons.svg#close"></use>
           </svg>
         </button>
-        <div class="container-modal-form">
-          <h3 class="form-heading">
+        <div class="modal__container">
+          <h3 class="modal__title">
             Leave your information and we'll call you back
           </h3>
-          <form class="modal-form" action="#">
-            <label class="modal-form-label"
+          <form class="modal__form" action="#">
+            <label class="modal__label"
               >Name
-              <svg class="modal-form-icon" width="18" height="18">
+              <svg class="modal__icon" width="18" height="18">
                 <use href="images/icons.svg#person"></use>
               </svg>
-              <input class="modal-form-input" name="name" type="text" />
+              <input class="modal__input" name="name" type="text" required />
             </label>
-            <label class="modal-form-label"
-              >Telephone<svg class="modal-form-icon" width="18" height="18">
+            <label class="modal__label"
+              >Telephone<svg class="modal__icon" width="18" height="18">
                 <use href="images/icons.svg#telephone"></use>
               </svg>
-              <input class="modal-form-input" name="telephone" type="tel" />
+              <input
+                class="modal__input"
+                name="telephone"
+                type="tel"
+                required
+              />
             </label>
-            <label class="modal-form-label"
-              >E-mail<svg class="modal-form-icon" width="18" height="18">
+            <label class="modal__label"
+              >E-mail<svg class="modal__icon" width="18" height="18">
                 <use href="images/icons.svg#email"></use>
               </svg>
-              <input class="modal-form-input" name="email" type="email" />
+              <input class="modal__input" name="email" type="email" required />
             </label>
-            <label class="modal-form-label"
+            <label class="modal__label"
               >Comments
               <textarea
-                class="modal-form-input modal-form-text-area"
+                class="modal__input modal__text-area"
                 name="comment"
                 placeholder="Enter the text"
               ></textarea>
             </label>
-            <div class="container-modal-form-checkbox">
+            <div class="modal__checkbox">
               <input
-                class="modal-form-checkbox-input"
                 id="chbox"
                 name="terms-acceptance"
                 type="checkbox"
                 value="accepted"
+                required
               />
-              <label class="modal-form-checkbox-label" for="chbox">
+              <label class="modal__checkbox-label" for="chbox">
                 I declare that I accept the
-                <a class="checkbox-label-link" href="#">Regulations</a> and the
-                <a class="checkbox-label-link" href="#">Privacy Policy</a>
+                <a class="modal__link" href="#">Regulations</a> and the
+                <a class="modal__link" href="#">Privacy Policy</a>
               </label>
             </div>
-            <button class="btn btn-modal-send" type="submit">Send</button>
+            <button class="btn modal__btn-send" type="submit">Send</button>
           </form>
         </div>
       </div>

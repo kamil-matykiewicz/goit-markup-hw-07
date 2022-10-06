@@ -20,7 +20,7 @@ but formatting on save changes it to uppercase-->
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/main.min.css" />
   </head>
 
   <body>
@@ -28,21 +28,27 @@ but formatting on save changes it to uppercase-->
       <div class="container">
         <div class="top-line">
           <nav>
-            <ul class="top-line-nav">
-              <li><a class="link logo" href="#">WebStudio</a></li>
-              <li><a class="link" href="./index.html">Studio</a></li>
+            <ul class="nav">
               <li>
-                <a class="link active-site" href="./portfolio.html"
+                <a class="link nav__link logo nav__logo" href="#">WebStudio</a>
+              </li>
+              <li>
+                <a class="link nav__link" href="./index.html">Studio</a>
+              </li>
+              <li>
+                <a
+                  class="link nav__link nav__link--active"
+                  href="./portfolio.html"
                   >Portfolio</a
                 >
               </li>
-              <li><a class="link" href="#">Contacts</a></li>
+              <li><a class="link nav__link" href="#">Contacts</a></li>
             </ul>
           </nav>
 
-          <ul class="contacts-header">
+          <ul class="top-line__contacts">
             <li>
-              <svg class="icon-header" width="16" height="12" tabindex="0">
+              <svg class="top-line__icon" width="16" height="12" tabindex="0">
                 <use href="images/icons.svg#envelope"></use>
               </svg>
               <a class="link" href="mailto:info@devstudio.com"
@@ -50,7 +56,7 @@ but formatting on save changes it to uppercase-->
               >
             </li>
             <li>
-              <svg class="icon-header" width="10" height="16" tabindex="0">
+              <svg class="top-line__icon" width="10" height="16" tabindex="0">
                 <use href="images/icons.svg#cell-phone"></use>
               </svg>
               <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -62,35 +68,36 @@ but formatting on save changes it to uppercase-->
 
     <main class="section">
       <div class="container">
+        <!-- TO DO: FLEX-GROW BUTTONS -->
         <ul class="filters">
-          <li><button class="btn btn-filter" type="button">All</button></li>
+          <li><button class="btn filters__btn" type="button">All</button></li>
           <li>
-            <button class="btn btn-filter" type="button">Web-sites</button>
+            <button class="btn filters__btn" type="button">Web-sites</button>
           </li>
           <li>
-            <button class="btn btn-filter wider" type="button">Apps</button>
+            <button class="btn filters__btn" type="button">Apps</button>
           </li>
           <li>
-            <button class="btn btn-filter" type="button">Design</button>
+            <button class="btn filters__btn" type="button">Design</button>
           </li>
           <li>
-            <button class="btn btn-filter" type="button">Marketing</button>
+            <button class="btn filters__btn" type="button">Marketing</button>
           </li>
         </ul>
 
-        <section class="portfolio-projects">
-          <ul class="projects-list">
+        <section class="projects">
+          <ul class="list projects__list">
             <li>
-              <figure class="project-card">
-                <div class="project-card-image-container">
+              <figure class="project__item">
+                <div class="card">
                   <img
-                    class="project-card-image"
+                    class="card__image"
                     src="images/project1-img.jpg"
                     alt="website on a laptop in a simple, elegant layout with photos and data of 3 people"
                     width="370"
                     height="294"
                   />
-                  <div class="project-card-image-overlay">
+                  <div class="card__overlay">
                     <p>
                       Technoduck is a state-of-the-art coronavirus distribution
                       platform. Companies use this platform for digital
@@ -98,24 +105,24 @@ but formatting on save changes it to uppercase-->
                     </p>
                   </div>
                 </div>
-                <figcaption class="project-card-caption">
-                  <h3 class="project-title">Technoduck</h3>
-                  <p class="project-category">Web-site</p>
+                <figcaption class="card__caption">
+                  <h3 class="project__title">Technoduck</h3>
+                  <p class="project__category">Web-site</p>
                 </figcaption>
               </figure>
             </li>
 
             <li>
-              <figure class="project-card">
-                <div class="project-card-image-container">
+              <figure class="project__item">
+                <div class="card">
                   <img
-                    class="project-card-image"
+                    class="card__image"
                     src="images/project2-img.jpg"
-                  alt="two basketball players in the air fighting for the ball"
-                  width="370"
+                    alt="two basketball players in the air fighting for the ball"
+                    width="370"
                     height="294"
                   />
-                  <div class="project-card-image-overlay">
+                  <div class="card__overlay">
                     <p>
                       Technoduck is a state-of-the-art coronavirus distribution
                       platform. Companies use this platform for digital
@@ -123,26 +130,26 @@ but formatting on save changes it to uppercase-->
                     </p>
                   </div>
                 </div>
-                <figcaption class="project-card-caption">
-                  <h3 class="project-title">
+                <figcaption class="card__caption">
+                  <h3 class="project__title">
                     Poster New Orlean vs Golden Star
                   </h3>
-                  <p class="project-category">Design</p>
+                  <p class="project__category">Design</p>
                 </figcaption>
               </figure>
             </li>
 
             <li>
-              <figure class="project-card">
-                <div class="project-card-image-container">
+              <figure class="project__item">
+                <div class="card">
                   <img
-                    class="project-card-image"
+                    class="card__image"
                     src="images/project3-img.jpg"
-                  alt="restaurant logo on the background of fish graphics"
-                  width="370"
+                    alt="restaurant logo on the background of a fish graphics"
+                    width="370"
                     height="294"
                   />
-                  <div class="project-card-image-overlay">
+                  <div class="card__overlay">
                     <p>
                       Technoduck is a state-of-the-art coronavirus distribution
                       platform. Companies use this platform for digital
@@ -150,24 +157,24 @@ but formatting on save changes it to uppercase-->
                     </p>
                   </div>
                 </div>
-                <figcaption class="project-card-caption">
-                  <h3 class="project-title">Seafood Restaurant</h3>
-                  <p class="project-category">Apps</p>
+                <figcaption class="card__caption">
+                  <h3 class="project__title">Seafood Restaurant</h3>
+                  <p class="project__category">Apps</p>
                 </figcaption>
               </figure>
             </li>
 
             <li>
-              <figure class="project-card">
-                <div class="project-card-image-container">
+              <figure class="project__item">
+                <div class="card">
                   <img
-                    class="project-card-image"
+                    class="card__image"
                     src="images/project4-img.jpg"
-                  alt="black on-ear headphones"
-                  width="370"
+                    alt="black on-ear headphones"
+                    width="370"
                     height="294"
                   />
-                  <div class="project-card-image-overlay">
+                  <div class="card__overlay">
                     <p>
                       Technoduck is a state-of-the-art coronavirus distribution
                       platform. Companies use this platform for digital
@@ -175,24 +182,24 @@ but formatting on save changes it to uppercase-->
                     </p>
                   </div>
                 </div>
-                <figcaption class="project-card-caption">
-                  <h3 class="project-title">Project Prime</h3>
-                  <p class="project-category">Marketing</p>
+                <figcaption class="card__caption">
+                  <h3 class="project__title">Project Prime</h3>
+                  <p class="project__category">Marketing</p>
                 </figcaption>
               </figure>
             </li>
 
             <li>
-              <figure class="project-card">
-                <div class="project-card-image-container">
+              <figure class="project__item">
+                <div class="card">
                   <img
-                    class="project-card-image"
+                    class="card__image"
                     src="images/project5-img.jpg"
-                  alt="white and gray boxes in two different sizes with a logo"
-                  width="370"
+                    alt="white and gray boxes in two different sizes with a logo"
+                    width="370"
                     height="294"
                   />
-                  <div class="project-card-image-overlay">
+                  <div class="card__overlay">
                     <p>
                       Technoduck is a state-of-the-art coronavirus distribution
                       platform. Companies use this platform for digital
@@ -200,24 +207,24 @@ but formatting on save changes it to uppercase-->
                     </p>
                   </div>
                 </div>
-                <figcaption class="project-card-caption">
-                  <h3 class="project-title">Project Boxes</h3>
-                  <p class="project-category">Apps</p>
+                <figcaption class="card__caption">
+                  <h3 class="project__title">Project Boxes</h3>
+                  <p class="project__category">Apps</p>
                 </figcaption>
               </figure>
             </li>
 
             <li>
-              <figure class="project-card">
-                <div class="project-card-image-container">
+              <figure class="project__item">
+                <div class="card">
                   <img
-                    class="project-card-image"
+                    class="card__image"
                     src="images/project6-img.jpg"
-                  alt="website in a minimalist dark layout with data"
-                  width="370"
+                    alt="website in a minimalist dark layout with data"
+                    width="370"
                     height="294"
                   />
-                  <div class="project-card-image-overlay">
+                  <div class="card__overlay">
                     <p>
                       Technoduck is a state-of-the-art coronavirus distribution
                       platform. Companies use this platform for digital
@@ -225,24 +232,24 @@ but formatting on save changes it to uppercase-->
                     </p>
                   </div>
                 </div>
-                <figcaption class="project-card-caption">
-                  <h3 class="project-title">Inspiration has no Borders</h3>
-                  <p class="project-category">Web-site</p>
+                <figcaption class="card__caption">
+                  <h3 class="project__title">Inspiration has no Borders</h3>
+                  <p class="project__category">Web-site</p>
                 </figcaption>
               </figure>
             </li>
 
             <li>
-              <figure class="project-card">
-                <div class="project-card-image-container">
+              <figure class="project__item">
+                <div class="card">
                   <img
-                    class="project-card-image"
+                    class="card__image"
                     src="images/project7-img.jpg"
-                  alt="opened design book with large pictures and text"
-                  width="370"
+                    alt="opened design book with large pictures and text"
+                    width="370"
                     height="294"
                   />
-                  <div class="project-card-image-overlay">
+                  <div class="card__overlay">
                     <p>
                       Technoduck is a state-of-the-art coronavirus distribution
                       platform. Companies use this platform for digital
@@ -250,24 +257,24 @@ but formatting on save changes it to uppercase-->
                     </p>
                   </div>
                 </div>
-                <figcaption class="project-card-caption">
-                  <h3 class="project-title">Limited Edition</h3>
-                  <p class="project-category">Design</p>
+                <figcaption class="card__caption">
+                  <h3 class="project__title">Limited Edition</h3>
+                  <p class="project__category">Design</p>
                 </figcaption>
               </figure>
             </li>
 
             <li>
-              <figure class="project-card">
-                <div class="project-card-image-container">
+              <figure class="project__item">
+                <div class="card">
                   <img
-                    class="project-card-image"
+                    class="card__image"
                     src="images/project8-img.jpg"
-                  alt="A white rectangular pendant with a black inscription hanging on a gold string"
-                  width="370"
+                    alt="A white rectangular pendant with a black inscription hanging on a gold string"
+                    width="370"
                     height="294"
                   />
-                  <div class="project-card-image-overlay">
+                  <div class="card__overlay">
                     <p>
                       Technoduck is a state-of-the-art coronavirus distribution
                       platform. Companies use this platform for digital
@@ -275,24 +282,24 @@ but formatting on save changes it to uppercase-->
                     </p>
                   </div>
                 </div>
-                <figcaption class="project-card-caption">
-                  <h3 class="project-title">Project LAB</h3>
-                  <p class="project-category">Marketing</p>
+                <figcaption class="card__caption">
+                  <h3 class="project__title">Project LAB</h3>
+                  <p class="project__category">Marketing</p>
                 </figcaption>
               </figure>
             </li>
 
             <li>
-              <figure class="project-card">
-                <div class="project-card-image-container">
+              <figure class="project__item">
+                <div class="card">
                   <img
-                    class="project-card-image"
+                    class="card__image"
                     src="images/project9-img.jpg"
-                  alt="hands on the laptop keyboard, application title on the screen with a man in a suit presenting a small tablet"
-                  width="370"
+                    alt="hands on the laptop keyboard, application title on the screen with a man in a suit presenting a small tablet"
+                    width="370"
                     height="294"
                   />
-                  <div class="project-card-image-overlay">
+                  <div class="card__overlay">
                     <p>
                       Technoduck is a state-of-the-art coronavirus distribution
                       platform. Companies use this platform for digital
@@ -300,9 +307,9 @@ but formatting on save changes it to uppercase-->
                     </p>
                   </div>
                 </div>
-                <figcaption class="project-card-caption">
-                  <h3 class="project-title">Growing Business</h3>
-                  <p class="project-category">Apps</p>
+                <figcaption class="card__caption">
+                  <h3 class="project__title">Growing Business</h3>
+                  <p class="project__category">Apps</p>
                 </figcaption>
               </figure>
             </li>
@@ -312,15 +319,15 @@ but formatting on save changes it to uppercase-->
     </main>
 
     <footer class="basement">
-      <div class="container container-basement">
-        <div class="basement-address">
+      <div class="container basement">
+        <div class="basement__contacts">
           <a class="link logo" href="#">WebStudio</a>
-          <address class="place-and-contacts">
+          <address class="basement__address">
             <p>
               695 Park Ave, New York, NY 10065,<br />
               United States
             </p>
-            <ul class="contacts-basement">
+            <ul class="basement__tele-mail">
               <li>
                 <a class="link" href="mailto:info@example.com"
                   >info@example.com</a
@@ -332,52 +339,52 @@ but formatting on save changes it to uppercase-->
             </ul>
           </address>
         </div>
-        <div class="basement-social">
+        <div class="basement__social">
           <p>find us on</p>
-          <ul class="basement-social-list">
+          <ul class="basement__social-list">
             <li>
-              <a class="basement-social-link" href="#">
-                <svg class="icon-social-basement" width="20" height="20">
+              <a class="basement__social-link" href="#">
+                <svg class="basement__icon-social" width="20" height="20">
                   <use href="images/icons.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="basement-social-link" href="#">
-                <svg class="icon-social-basement" width="20" height="20">
+              <a class="basement__social-link" href="#">
+                <svg class="basement__icon-social" width="20" height="20">
                   <use href="images/icons.svg#twitter"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="basement-social-link" href="#">
-                <svg class="icon-social-basement" width="20" height="20">
+              <a class="basement__social-link" href="#">
+                <svg class="basement__icon-social" width="20" height="20">
                   <use href="images/icons.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="basement-social-link" href="#">
-                <svg class="icon-social-basement" width="20" height="20">
+              <a class="basement__social-link" href="#">
+                <svg class="basement__icon-social" width="20" height="20">
                   <use href="images/icons.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div class="basement-form">
+        <div class="basement__form">
           <form action="#">
-            <label class="basement-form-label" for="mail-newslttr"
+            <label class="basement__form-label" for="mail-newslttr"
               >subscribe to the newsletter</label
             >
             <input
-              class="basement-form-input"
+              class="basement__form-input"
               id="mail-newslttr"
               name="email"
               type="email"
               placeholder="E-mail"
             />
-            <button class="btn btn-newslttr" type="submit">
+            <button class="btn basement__btn" type="submit">
               subscribe
               <svg width="24" height="24">
                 <use href="images/icons.svg#send"></use>

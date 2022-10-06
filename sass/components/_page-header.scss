@@ -1,0 +1,78 @@
+header {
+  border-bottom: 1px solid $border-header;
+}
+
+.top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  @include typography(14px, 1.14);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  &__contacts {
+    display: flex;
+    color: $gray-text;
+  }
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
+
+.top-line__item {
+  display: flex;
+  align-items: center;
+
+  &:nth-of-type(1) {
+    padding-right: 50px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 63px;
+
+  &__logo {
+    margin-right: 30px;
+  }
+
+  &__link {
+    display: flex;
+    line-height: 80px;
+  }
+
+  &__link--active {
+    position: relative;
+  }
+  &__link--active::after {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    display: inline-block;
+    width: 60px;
+    height: 4px;
+    content: '';
+    background-color: $blue;
+    border-radius: 2px;
+  }
+}
+
+// start of: icon focuses & hovers rules
+.top-line__item {
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
+}
+
+.top-line__icon {
+  @include transition(color);
+
+  &:focus {
+    color: $blue;
+  }
+}
+// end of: icon focuses & hovers rules

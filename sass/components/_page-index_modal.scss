@@ -1,0 +1,206 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  transition: transform $time-timingFunction, opacity $time-timingFunction,
+    visibility $time-timingFunction;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  /* does fairly the same as visibility */
+  visibility: visible;
+  background-color: $modal-backdrop-background;
+}
+.is-hidden {
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  /* Co do pytania o pointer-events: none. Gdybyś do animacji używał tylko opacity (zrezygnował z visibility oraz scale) to bez pointer-events: none nie dałoby się kliknąć w nic na ekranie. Działoby się tak ponieważ backdrop byłby zawsze obecny na ekranie i blokowałby wszystkie inne kliknięcia. Bo opacity(0) sprawia tylko tyle, że backdrop  jest przezroczysty ale go nie ukrywa i on dalej tam jest i blokuje cały ekran. Więc pointer-events: none jest takim jakby zabezpieczeniem, na wszelki wypadek */
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  &__btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding-inline: 0;
+    background-color: $white;
+    border: 1px solid $black-alpha-10;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__container {
+    margin: 40px;
+  }
+
+  &__title {
+    padding-bottom: 12px;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+  }
+
+  &__input {
+    margin-top: 4px;
+    padding: 11px 42px;
+    border: 1px solid $border-modal-input;
+    border-radius: 4px;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: baseline;
+    margin: 20px 11px;
+  }
+
+  &__checkbox-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  &__link {
+    color: $blue;
+  }
+
+  &__btn-send {
+    margin-inline: auto;
+    padding: 10px 80px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    color: $white;
+    background-color: $blue;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.modal__label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: $gray-text;
+
+  &:not(:nth-child(1)) {
+    margin-top: 10px;
+  }
+}
+
+.modal__text-area {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+
+  &::placeholder {
+    @include typography(14px, 1.14);
+    letter-spacing: 0.01em;
+    color: $gray-text-alpha-50;
+  }
+}
+
+// CLASS ADDED TO MITIGATE LACK OF THE CUSTOM CUSTOM-SVG-CHECKBOX ICON (DETAILS BELOW)
+// start of: checkbox rules
+.modal__checkbox-label {
+  // position: relative;
+  // padding-left: 22px;
+  padding-left: 12px;
+  color: $gray-text;
+  cursor: pointer;
+}
+
+// STUFF FOR THE CUSTOM-SVG-CHECKBOX ICON THAT DIDN'T WORKED FOR ME, SWITCHED TO DEFAULT
+// REMEMBER! FOR BRINGING ISSUE BACK: assign class to the input element
+// .modal__checkbox-label::before {
+//   position: absolute;
+//   top: 1px;
+//   left: -2px;
+//   display: block;
+//   width: 16px;
+//   height: 15px;
+//   content: '';
+//   border: 2px solid $black;
+//   border-radius: 2px;
+//   background-repeat: no-repeat;
+//   background-size: auto 100%;
+//   background-position: center;
+
+//   .modal__checkbox-input:checked + & {
+//     background-image: url('../images/icons.svg#check');
+//     border: none;
+//   }
+// }
+// end of: checkbox rules
+
+// start of: closing button rules
+.modal__btn-icon {
+  transition: fill $time-timingFunction;
+}
+
+.modal__btn-close:hover .modal__btn-icon,
+.modal__btn-close:focus {
+  fill: $blue;
+  outline: none;
+}
+// end of: closing button rules
+
+// start of: icon & input hovers & focuses rules
+.modal__icon {
+  transition: fill $time-timingFunction;
+
+  .modal__label:hover & {
+    fill: $blue;
+  }
+
+  .modal__label:focus-within & {
+    fill: $blue;
+  }
+}
+
+.modal__input {
+  transition: border $time-timingFunction;
+
+  .modal__label:hover & {
+    border: 1px solid $blue;
+    outline: none;
+  }
+
+  &:focus {
+    border: 1px solid $blue;
+    outline: none;
+  }
+}
+// end of: icon & input hovers & focuses rules

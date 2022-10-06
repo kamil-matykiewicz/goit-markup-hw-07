@@ -1,0 +1,101 @@
+.basement {
+  display: flex;
+  gap: 81px;
+  background-color: $dark;
+
+  .logo {
+    display: block;
+    padding-bottom: 9px;
+  }
+
+  .basement__contacts {
+    padding-block: 60px;
+  }
+
+  .basement__address {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $white;
+  }
+
+  .basement__tele-mail .link {
+    color: $white-alpha-60;
+  }
+
+  .basement__social {
+    padding-top: 72px;
+    @include typography(14px, 1.14);
+    @include typography-uppercased-bold;
+    letter-spacing: 0.06em;
+    color: $white;
+  }
+
+  .basement__social-list {
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+  }
+
+  .basement__icon-social {
+    fill: $white;
+  }
+
+  .basement__form {
+    padding-top: 72px;
+    @include typography(14px, 1.14);
+    @include typography-uppercased-bold;
+    letter-spacing: 0.09em;
+    color: $white;
+  }
+
+  .basement__form-label {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .basement__btn {
+    display: inline-flex;
+    gap: 30px;
+    align-items: center;
+    padding: 10px 28px 10px 48px;
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    color: $white;
+    background-color: $blue;
+    fill: $white;
+  }
+}
+
+.basement__social-link {
+  display: flex;
+  padding: 12px;
+  @include transition(background-color);
+  background-color: $white-alpha-10;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $blue;
+  }
+}
+
+.basement__form-input {
+  width: 358px;
+  margin-right: 6px;
+  padding-block: 15px;
+  padding-inline: 16px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: $white;
+  background-color: $dark;
+  border: 1px solid $white-alpha-30;
+  border-radius: 4px;
+
+  &::placeholder {
+    color: $white-alpha-60;
+  }
+}

@@ -1,0 +1,25 @@
+@mixin font-main {
+  font-family: 'Roboto', sans-serif;
+  color: $default-text-color;
+}
+
+@mixin typography-logo {
+  font: 700 26px/1.19 'Raleway', sans-serif;
+  letter-spacing: 0.03em;
+  color: $blue;
+}
+
+@mixin typography($fnt-size, $line-hght) {
+  font-size: $fnt-size;
+  line-height: $line-hght;
+}
+
+@mixin typography-uppercased-bold {
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+@mixin transition($property) {
+  transition: $property $time-timingFunction;
+}

@@ -1,0 +1,183 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  height: 600px;
+  padding: 200px 452px;
+  text-align: center;
+  background-image: linear-gradient($dark-alpha-40, $dark-alpha-40),
+    url(../images/banner-img.jpg);
+  background-size: 1600px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__title {
+    width: 696px;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: $white;
+  }
+
+  &__btn {
+    width: 200px;
+    padding-block: 10px;
+    padding-inline: 19px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    color: $white;
+    background-color: $blue;
+  }
+}
+
+.traits {
+  padding-bottom: 6px;
+  @include typography(14px, 1.14);
+  letter-spacing: 0.03em;
+
+  &__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+
+  &__icon {
+    width: 270px;
+    height: 120px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: $gray-bcg;
+  }
+
+  &__trait {
+    @include typography-uppercased-bold;
+  }
+
+  &__trait-info {
+    margin-top: 10px;
+    line-height: 1.71;
+    color: $gray-text;
+  }
+}
+
+.products-types__heading {
+  padding-bottom: 50px;
+  text-align: center;
+  @include typography(36px, 1.16);
+  letter-spacing: 0.03em;
+}
+
+.products-types__figure {
+  position: relative;
+}
+.products-types__caption {
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  padding-block: 27px;
+  text-align: center;
+  @include typography(14px, 1.14);
+  @include typography-uppercased-bold;
+  letter-spacing: 0.03em;
+  color: $white;
+  background-color: $dark-alpha-80;
+}
+
+.team {
+  text-align: center;
+  letter-spacing: 0.03em;
+  line-height: 1.1875;
+  background-color: $gray-bcg;
+
+  &__title {
+    padding-bottom: 50px;
+    @include typography(36px, 1.16);
+  }
+
+  &__card {
+    background-color: $white;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__name {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-weight: 500;
+  }
+
+  &__trade {
+    color: $gray-text;
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 16px 32px 30px;
+  }
+
+  &__social-link {
+    display: flex;
+    padding: 12px;
+    border-radius: 50%;
+  }
+}
+
+// start of: social's icons focuses & hovers rules
+.team__social-link {
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $blue;
+  }
+}
+.team__icon-social {
+  fill: $gray-icon;
+  @include transition(fill);
+
+  .team__social-link:hover &,
+  .team__social-link:focus & {
+    fill: $white;
+  }
+}
+// end of: social's icons focuses & hovers rules
+
+.customers__list {
+  margin-top: 50px;
+}
+
+.customers__title {
+  text-align: center;
+  @include typography(36px, 1.16);
+  letter-spacing: 0.03em;
+}
+
+// start of: customer's icons focuses & hovers rules
+.customers__link {
+  display: block;
+  padding: 16px 32px;
+  border: 1px solid $gray-icon;
+  border-radius: 4px;
+  transition: border $time-timingFunction;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $blue;
+  }
+}
+
+.customers__icon {
+  fill: $gray-icon;
+  transition: fill $time-timingFunction;
+
+  .customers__link:hover &,
+  .customers__link:focus & {
+    fill: $blue;
+  }
+}
+// end of: customer's icons focuses & hovers rules
